@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router basename="/biryanibrewssg/">
+    <Router>
       <div className="app-container">
         <Navbar />
         <main>
