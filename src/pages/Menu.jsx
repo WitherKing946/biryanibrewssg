@@ -30,13 +30,15 @@ const menuCategories = [
 const Menu = () => {
   return (
     <div className="menu-page">
-      <div className="menu-header" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${images[14] || images[1]})` }}>
-        <h1 className="animate__animated animate__fadeInDown">Our Menu</h1>
-        <p className="animate__animated animate__fadeInUp">Authentic Taste in Every Bite</p>
+      <div className="menu-header" style={{ backgroundImage: `url(${images[14] || images[1]})` }}>
+        <div className="menu-header-content">
+          <h1 className="animate__animated animate__fadeInDown">Our Menu</h1>
+          <p className="animate__animated animate__fadeInUp">Authentic Taste in Every Bite</p>
+        </div>
       </div>
 
       <div className="container menu-content">
-        <div className="chef-recommends glass-panel animate__animated animate__fadeIn">
+        <div className="chef-recommends light-panel animate__animated animate__fadeIn">
           <h2>Our Chef Recommends</h2>
           <p>Our menu is thoughtfully crafted and we provide an impeccable service. We are known for sharing plates and crafting dishes.</p>
         </div>

@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
-      <section className="hero" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url(${images[9] || images[0]})` }}>
+      <section className="hero" style={{ backgroundImage: `url(${images[9] || images[0]})` }}>
         <div className="container hero-content animate__animated animate__fadeInUp">
           <h1 className="hero-title">Authentic DUM Biryani</h1>
           <p className="hero-subtitle">Hand-picked raw spices blended to perfection</p>
@@ -49,7 +49,7 @@ const Home = () => {
           <h2 className="text-center animate__animated animate__fadeInDown">Treating your loved ones never felt so good!</h2>
           <div className="features-grid">
             {features.map((feat, index) => (
-              <div key={index} className="feature-card glass-panel animate__animated animate__zoomIn" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="feature-card light-panel animate__animated animate__zoomIn" style={{ animationDelay: `${index * 0.1}s` }}>
                 <img src={feat.icon} alt={feat.title} className="feature-icon" />
                 <h3>{feat.title}</h3>
                 <p>{feat.desc}</p>
@@ -63,15 +63,15 @@ const Home = () => {
       <section className="section testimonials-section container text-center">
         <h2>What Our Customers Say</h2>
         <div className="testimonials-grid">
-          <div className="testimonial glass-panel">
+          <div className="testimonial light-panel">
             <p className="quote">"Biryani taste here is good and consistent. After a long time, I have really enjoyed the homely taste of both chicken and mutton biryani..."</p>
             <p className="author">- Prakash Rajamohan</p>
           </div>
-          <div className="testimonial glass-panel">
+          <div className="testimonial light-panel">
             <p className="quote">"The food is absolutely wonderful because of its unique flavor and authentic taste. Especially my kids also loved it a lot..."</p>
             <p className="author">- lakkireddy.sailaja sudha</p>
           </div>
-          <div className="testimonial glass-panel">
+          <div className="testimonial light-panel">
             <p className="quote">"This place has my highest recommendation. This biryani is so flavourful, can’t express in words..."</p>
             <p className="author">- Sonali S</p>
           </div>

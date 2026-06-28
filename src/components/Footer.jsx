@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import images from '../images.json';
 
 const Footer = () => {
+  const logoUrl = images[2] || "https://static.wixstatic.com/media/67cb39_c012f3a8556142c0a1efc141568ed0df~mv2.png";
+
   return (
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-brand">
-          <h2>Biryani Brews</h2>
-          <p>Authentic DUM Biryani</p>
+          <img src={logoUrl} alt="Biryani Brews Logo" className="footer-logo" />
           <p className="address">Anchorvale Village, #B1-21, Singapore 540339</p>
           <p className="phone">+65 69313230</p>
         </div>

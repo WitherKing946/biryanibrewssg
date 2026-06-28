@@ -3,17 +3,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
   z-index: 1000;
   transition: all 0.3s ease;
   background: transparent;
 }
 
 .navbar.scrolled {
-  background: rgba(18, 18, 18, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 15px 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 10px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-content {
@@ -22,22 +21,14 @@
   align-items: center;
 }
 
-.brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.brand-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
 }
 
-.brand-primary {
-  color: var(--text-light);
-  font-weight: 600;
-}
-
-.brand-secondary {
-  color: var(--accent-gold);
-  font-style: italic;
+.navbar.scrolled .brand-logo {
+  height: 50px;
 }
 
 .nav-links {
@@ -51,21 +42,32 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: var(--text-dark);
+}
+
+.navbar:not(.scrolled) .nav-links a:not(.gold-btn) {
+  color: #fff; /* assuming hero image is dark behind it */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .nav-links a.active {
-  color: var(--accent-gold);
+  color: var(--accent-gold) !important;
 }
 
 .nav-btn {
   padding: 10px 24px;
+  text-shadow: none !important;
 }
 
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  color: var(--accent-gold);
+  color: var(--text-dark);
+}
+
+.navbar:not(.scrolled) .mobile-menu-btn {
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -79,14 +81,19 @@
     right: -100%;
     width: 250px;
     height: 100vh;
-    background: var(--bg-card);
+    background: var(--bg-light);
     flex-direction: column;
     padding-top: 80px;
     transition: 0.4s ease;
-    box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
   }
   
   .nav-links.open {
     right: 0;
+  }
+
+  .nav-links a:not(.gold-btn) {
+    color: var(--text-dark) !important;
+    text-shadow: none !important;
   }
 }

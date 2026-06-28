@@ -9,17 +9,34 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 60px;
+  position: relative;
+}
+
+.menu-header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); /* lighter overlay */
+  z-index: 1;
+}
+
+.menu-header-content {
+  position: relative;
+  z-index: 2;
 }
 
 .menu-header h1 {
   font-size: 64px;
   margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 .menu-header p {
   font-size: 24px;
-  color: var(--accent-gold);
+  color: var(--bg-light);
   font-style: italic;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .chef-recommends {
@@ -35,7 +52,7 @@
 
 .chef-recommends p {
   font-size: 18px;
-  color: #ccc;
+  color: var(--text-light);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -68,7 +85,7 @@
 .item-header h4 {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-weight: 600;
 }
 
@@ -79,7 +96,7 @@
 }
 
 .item-desc {
-  color: #aaa;
+  color: var(--text-light);
   font-size: 15px;
 }
 

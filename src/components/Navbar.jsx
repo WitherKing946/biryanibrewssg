@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
+import images from '../images.json';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,12 +19,14 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Logo URL found from original HTML
+  const logoUrl = images[2] || "https://static.wixstatic.com/media/67cb39_c012f3a8556142c0a1efc141568ed0df~mv2.png";
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-content">
         <Link to="/" className="brand">
-          <span className="brand-primary">Biryani</span>
-          <span className="brand-secondary">Brews</span>
+          <img src={logoUrl} alt="Biryani Brews Logo" className="brand-logo" />
         </Link>
         
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
