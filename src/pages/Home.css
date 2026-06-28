@@ -1,0 +1,139 @@
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 72px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.discover-text h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.discover-text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ccc;
+  text-align: justify;
+}
+
+.discover-images {
+  position: relative;
+}
+
+.img-main {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.img-sub {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 250px;
+  border-radius: 12px;
+  border: 5px solid var(--bg-dark);
+}
+
+.features-section {
+  background-color: var(--bg-card);
+  margin-top: 50px;
+}
+
+.features-section h2 {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.testimonials-section h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  padding: 40px;
+  text-align: left;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.author {
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  .discover-grid {
+    grid-template-columns: 1fr;
+  }
+  .img-sub {
+    display: none;
+  }
+}

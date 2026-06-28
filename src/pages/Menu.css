@@ -1,0 +1,93 @@
+.menu-header {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.menu-header h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.menu-header p {
+  font-size: 24px;
+  color: var(--accent-gold);
+  font-style: italic;
+}
+
+.chef-recommends {
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.chef-recommends h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.chef-recommends p {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.menu-category h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+.menu-item {
+  margin-bottom: 25px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.item-header h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.price {
+  font-weight: 600;
+  color: var(--accent-gold);
+  font-size: 18px;
+}
+
+.item-desc {
+  color: #aaa;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .menu-header h1 {
+    font-size: 48px;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
